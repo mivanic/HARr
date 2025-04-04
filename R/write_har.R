@@ -21,7 +21,13 @@ write_har <- function(data, filename, maxSize = 1e4) {
         if(any(class(data[[f]])=='matrix') & is.integer(data[[f]])){
           write_2IFULL(headerName, data[[f]], description = attr(data[[f]],'description'))
         } else {
-          write_REFULL(headerName, data[[f]],maxSize=maxSize, description = attr(data[[f]],'description'))
+          if(sum(data[[f]]==0) / length(data[[f]])>.5){
+            message("Doing sparse")
+            write_RESPSE(headerName, data[[f]],maxSize=maxSize, description = attr(data[[f]],'description'))
+          } else {
+            write_REFULL(headerName, data[[f]],maxSize=maxSize, description = attr(data[[f]],'description'))
+
+          }
         }
       }
     }
