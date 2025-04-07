@@ -6,7 +6,7 @@ This package does not use any GEMPACK routines; instead, it works with the binar
 # To install you can try the following: 
 ```R
 install.packages('devtools')
-devtools::install_git('https://github.com/USDA-ERS/MTED-HARr.git')
+devtools::install_git('https://github.com/mivanic/HARr.git')
 require(HARr)
 ```
 # To read a HAR file you can try the following: 
