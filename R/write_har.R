@@ -3,10 +3,12 @@
 #' @description This function writes a HAR file based on a list. If a list element contains attribute "description," then it is used to define the long header name
 #' @description Some warnings: (1) you cannot have NA's in a HAR file, (2) empty strings are not allowed, (3) some programs (e.g., GEMPACK models) read chunks of data no longer than 1e4 bytes (set maxSize = 1e4), (4) all dimensions in arrays must have names (see example)
 #' @param data A list
+#' @param filename Path to the file to be created
+#' @param maxSize Maximum size of data chunk in real array, default of 10,000
 #' @returns NULL
 #' @examples myList = list(TEST = c('Test'))
 #' @examples attr(myList$TEST,'description') = "This is the long header name"
-#' @examples write_har(myList,'harfile.har')
+#' @examples \dontrun{write_har(myList,'harfile.har')}
 #' @export
 write_har <- function(data, filename, maxSize = 1e4) {
   # Open the file

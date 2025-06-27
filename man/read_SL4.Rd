@@ -8,6 +8,8 @@ read_SL4(filename, toLowerCase = TRUE)
 }
 \arguments{
 \item{filename}{Path to SL4 file}
+
+\item{toLowerCase}{Logical: should all text from the SL4 file be turned to lowercase}
 }
 \value{
 A list of variables

@@ -2,6 +2,7 @@
 #' @name read_SL4
 #' @description This function reads SL4 solution files into a list
 #' @param filename Path to SL4 file
+#' @param toLowerCase Logical: should all text from the SL4 file be turned to lowercase
 #' @return A list of variables
 #' @export
 read_SL4 = function(filename, toLowerCase = TRUE) {

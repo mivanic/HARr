@@ -12,13 +12,13 @@ read_har(
 )
 }
 \arguments{
+\item{con}{Connection or path to HAR file}
+
 \item{useCoefficientsAsNames}{If a coefficient name is present in the header, use that instead of the four-letter header}
 
 \item{toLowerCase}{= TRUE Turn all strings to lower case}
 
 \item{headersToRead}{= NULL A vector of header names to read in}
-
-\item{filename}{Path to HAR file}
 }
 \value{
 A list of headers

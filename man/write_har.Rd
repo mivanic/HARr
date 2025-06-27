@@ -8,6 +8,10 @@ write_har(data, filename, maxSize = 10000)
 }
 \arguments{
 \item{data}{A list}
+
+\item{filename}{Path to the file to be created}
+
+\item{maxSize}{Maximum size of data chunk in real array, default of 10,000}
 }
 \description{
 This function writes a HAR file based on a list. If a list element contains attribute "description," then it is used to define the long header name
@@ -17,5 +21,5 @@ Some warnings: (1) you cannot have NA's in a HAR file, (2) empty strings are not
 \examples{
 myList = list(TEST = c('Test'))
 attr(myList$TEST,'description') = "This is the long header name"
-write_har(myList,'harfile.har')
+\dontrun{write_har(myList,'harfile.har')}
 }
